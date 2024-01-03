@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2015411185078257041}
   - component: {fileID: 1025081408857517379}
   - component: {fileID: 6023317574455290883}
+  - component: {fileID: 4682734763590475990}
+  - component: {fileID: 3236657580231314007}
   m_Layer: 0
   m_Name: cannon
   m_TagString: Untagged
@@ -81,6 +83,36 @@ MonoBehaviour:
   playerYAxisLockValue: -4.22
   paddingRight: 0.7
   paddingLeft: -0.7
+--- !u!114 &4682734763590475990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930609542589698840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cd817d686e028c40bb9b3576eb33f13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+--- !u!114 &3236657580231314007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930609542589698840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd086a246fb6138428490fd9abc75c03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 8239578594362542114, guid: 70dc088bbd08e6341921f2934e9b829d, type: 3}
+  projectileSpeed: 10
+  projectileLifeTime: 5
+  firingRate: 0.2
+  isFiring: 0
 --- !u!1 &3442019079691282926
 GameObject:
   m_ObjectHideFlags: 0
