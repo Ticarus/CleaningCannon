@@ -11,21 +11,15 @@ public class Shooter : MonoBehaviour
 
     public bool isFiring;
 
-    Coroutine firingCoroutine;
-
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
-        
+        Fire();
     }
 
+    Coroutine firingCoroutine;
     void Fire()
     {
-        if (isFiring && firingCoroutine != null)
+        if (isFiring && firingCoroutine == null)
         {
             firingCoroutine = StartCoroutine(FireContinuously());
         }
@@ -34,7 +28,6 @@ public class Shooter : MonoBehaviour
             StopCoroutine(firingCoroutine);
             firingCoroutine = null;
         }
-        
     }
 
     IEnumerator FireContinuously()
@@ -44,12 +37,14 @@ public class Shooter : MonoBehaviour
             GameObject instance = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
             
             Rigidbody2D rb = instance.GetComponent<Rigidbody2D>();
+
             if(rb != null)
             {
-                rb.velocity = transform.right * projectileSpeed;
+                rb.velocity = transform.up * projectileSpeed;
             }
 
             Destroy(instance, projectileLifeTime);
+
             yield return new WaitForSeconds(firingRate);
         }
     }

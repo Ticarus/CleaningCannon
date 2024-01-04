@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 6023317574455290883}
   - component: {fileID: 4682734763590475990}
   - component: {fileID: 3236657580231314007}
+  - component: {fileID: -6925077517933330001}
   m_Layer: 0
   m_Name: cannon
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,9 +111,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 8239578594362542114, guid: 70dc088bbd08e6341921f2934e9b829d, type: 3}
   projectileSpeed: 10
-  projectileLifeTime: 5
-  firingRate: 0.2
+  projectileLifeTime: 1
+  firingRate: 0.8
   isFiring: 0
+--- !u!50 &-6925077517933330001
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930609542589698840}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &3442019079691282926
 GameObject:
   m_ObjectHideFlags: 0
