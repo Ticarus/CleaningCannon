@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 4549346819666525312}
   - component: {fileID: 5378208209094171261}
   - component: {fileID: 4865352610322410738}
+  - component: {fileID: 1514411892354184342}
   m_Layer: 0
   m_Name: dirty_object_0 6
-  m_TagString: Untagged
+  m_TagString: Dirty
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -186,3 +187,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   hitEffect: {fileID: 2125670099879311329, guid: a1a0ded840216dc4988c907e53a76f8c, type: 3}
+--- !u!114 &1514411892354184342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7723113089675340931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2515f394bc178544a9654e22df7d786b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreValue: 10
+  dirtySprite: {fileID: 442539400, guid: e060e359ce7c44e43aa7dd1992b70cc7, type: 3}
+  cleanSprite: {fileID: -774082811, guid: e060e359ce7c44e43aa7dd1992b70cc7, type: 3}

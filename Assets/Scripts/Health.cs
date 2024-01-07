@@ -7,10 +7,21 @@ public class Health : MonoBehaviour
     [SerializeField] int health = 10;
     [SerializeField] ParticleSystem hitEffect;
 
+    Enemy enemy;
+    ScoreKeeper scoreKeeper;
+    LevelManager levelManager;
+
+    void Awake()
+    {
+        enemy = FindObjectOfType<Enemy>();
+        scoreKeeper = FindObjectOfType<ScoreKeeper>();
+        levelManager = FindObjectOfType<LevelManager>();
+    }
+
     void OnTriggerExit2D(Collider2D collision)
     {
         DamageDealer damageDealer = collision.GetComponent<DamageDealer>();
-        if(damageDealer != null)
+        if(damageDealer != null && gameObject.tag == "Dirty")
         {
             TakeDamage(damageDealer.GetDamage());
             PlayHitEffect();
@@ -18,12 +29,19 @@ public class Health : MonoBehaviour
         }
     }
 
+    public int GetHealth()
+    {
+        return health;
+    }
+
     void TakeDamage(int damage)
     {
         health -= damage;
         if(health <= 0)
         {
-            Destroy(gameObject);
+            enemy.SetSprite(enemy.GetCleanSprite());
+            gameObject.tag = "Clean";
+            scoreKeeper.ModifyScore(enemy.GetScoreValue());
         }
     }
 

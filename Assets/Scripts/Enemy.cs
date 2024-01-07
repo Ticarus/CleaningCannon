@@ -4,16 +4,32 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("Score")]
     [SerializeField] int scoreValue;
-    [SerializeField] SpriteRenderer sprite;
-    [SerializeField] SpriteRenderer dirtySprite;
-    [SerializeField] SpriteRenderer cleanSprite;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    [Header("Sprites")]
+    [SerializeField] Sprite dirtySprite;
+    [SerializeField] Sprite cleanSprite;
+
+    SpriteRenderer spriteRenderer;
+
+    void Awake()
     {
-        if(collision.tag == "Gate" && this.sprite == cleanSprite)
-        {
+        spriteRenderer = FindObjectOfType<SpriteRenderer>();
+    }
 
-        }
+    public void SetSprite(Sprite sprite)
+    {
+        spriteRenderer.sprite = sprite;
+    }
+
+    public Sprite GetCleanSprite()
+    {
+        return cleanSprite;
+    }
+
+    public int GetScoreValue()
+    {
+        return scoreValue;
     }
 }
