@@ -564,7 +564,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 558bb7d14c5cc094dba510d95551df7f, type: 2}
   - {fileID: 11400000, guid: 36447c2e8f842c2438fb50064db09bd0, type: 2}
   timeBetweenWaves: 2
-  isLooping: 0
+  isLooping: 1
 --- !u!4 &652356239
 Transform:
   m_ObjectHideFlags: 0
@@ -639,8 +639,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9cfcfcbf42a79bf4abc1204f0054e2a6, type: 2}
-  m_sharedMaterial: {fileID: 3252450143155283031, guid: 9cfcfcbf42a79bf4abc1204f0054e2a6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 152fca77484817347b02ca361f315d87, type: 2}
+  m_sharedMaterial: {fileID: 3252450143155283031, guid: 152fca77484817347b02ca361f315d87, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
