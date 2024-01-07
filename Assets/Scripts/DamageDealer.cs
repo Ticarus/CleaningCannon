@@ -6,6 +6,13 @@ public class DamageDealer : MonoBehaviour
 {
     [SerializeField] int damage = 10;
 
+    AudioPlayer audioPlayer;
+
+    void Awake()
+    {
+        audioPlayer = FindObjectOfType<AudioPlayer>();    
+    }
+
     public int GetDamage()
     {
         return damage;
@@ -13,6 +20,7 @@ public class DamageDealer : MonoBehaviour
 
     public void Hit()
     {
+        audioPlayer.PlayDamageClip();
         Destroy(gameObject);
     }
 }
